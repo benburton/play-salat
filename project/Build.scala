@@ -9,7 +9,7 @@ object ProjectBuild extends Build {
     organization := "se.radley",
     description := "MongoDB Salat plugin for PlayFramework 2",
     version := buildVersion,
-    scalaVersion := "2.10.0",
+    scalaVersion := "2.10.2",
     parallelExecution in Test := false,
     testFrameworks += TestFrameworks.Specs2,
 
@@ -18,9 +18,9 @@ object ProjectBuild extends Build {
     resolvers += "Sonatype Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots/",
 
     libraryDependencies ++= Seq(
-      "play" %% "play" % "2.1.3" % "provided",
-      "play" % "play-exceptions" % "2.1.3" % "provided",
-      "play" %% "play-test" % "2.1.0" % "test",
+      "com.typesafe.play" %% "play" % "2.2.0" % "provided",
+      "com.typesafe.play" % "play-exceptions" % "2.2.0" % "provided",
+      "com.typesafe.play" %% "play-test" % "2.2.0" % "test",
       "com.novus" %% "salat" % "1.9.2",
       "org.mongodb" %% "casbah-gridfs" % "2.6.2"
     )
